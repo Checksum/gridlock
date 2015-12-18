@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  h3 When in maintenance mode, you will be able to login
+  form(method='post', action='/login')
+    label(for='username') Username
+    input#username(name='username')
+    button(type='submit') Login
+  
+  h3 But you will not be able to create a new task
+  form(method='post', action='/task')
+    label(for='title') Task title
+    input#title(name='title')
+    button(type='submit') Create

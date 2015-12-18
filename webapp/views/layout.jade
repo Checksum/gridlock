@@ -1,0 +1,10 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    if readonly
+      p(style='padding: 20px 0; font-size: 16px; background: #FFDC00; text-align: center;')
+        | We are under maintenance and certain features are restricted. Be back soon!
+    block content
